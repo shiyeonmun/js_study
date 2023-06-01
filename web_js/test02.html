@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 지연</title>
+
+    <script>
+        alert("hello world");
+
+        function bfFunction(){
+            alert("3초가 지났습니다");
+        }
+        
+    </script>
+</head>
+<body>
+
+    <button onclick="setTimeout(bfFunction, 3000)">버튼클릭(3초뒤 실행)</button>
+
+</body>
+</html>

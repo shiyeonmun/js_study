@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let SCISSORS = "가위";
+        let ROCK = "바위";
+        let PAPER ="보";
+
+        let userInput = prompt("가위,바위,보");
+
+
+        if (userInput !== "가위" && userInput !== "바위" && userInput !== "보"){
+            alert("가위 바위 보 중 하나를 입력하셔야 합니다.");
+        } else {
+            let comInput;
+
+            let rnd = Math.random();
+
+            if(rnd < 0.33) {
+                comInput= SCISSORS;
+            } else if(rnd <0.66) {
+                comInput = ROCK;
+            } else {
+                comInput = PAPER;
+            }
+
+            if(userInput === SCISSORS){
+                if(comInput === SCISSORS){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터와 비겼습니다.");
+                } else if(comInput === ROCK){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터에게 졌습니다.");
+                } else if(comInput === PAPER){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터를 이겼습니다.");
+                }
+            } else if(userInput === ROCK){
+                if(comInput === SCISSORS){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터를 이겼습니다.");
+                } else if(comInput === ROCK){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터와 비겼습니다.");
+                } else if(comInput === PAPER){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터에게 졌습니다.");
+                }
+            } else {
+                if(comInput === SCISSORS){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터에게 졌습니다.");
+                } else if(comInput === ROCK){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터를 이겼습니다.");
+                } else if(comInput === PAPER){
+                    alert("컴퓨터:" + comInput + "- 컴퓨터와 비겼습니다.");
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
